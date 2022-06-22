@@ -24,6 +24,7 @@ def ingest_data():
     import urllib.request
     import datetime
     import logging
+    from os import remove
 
     # Generación años a descargar desde 1995
     # Total de años a generar
@@ -47,6 +48,13 @@ def ingest_data():
             )
             f.close()
         except Exception:
+            # se cierra el archivo que no se pudo descargar
+            f.close()
+
+            # se borra archivo si no se puede descargar por alguna razón y se intenta con XLS y se guarda en la misma carpeta de landing
+            remove(f"data_lake/landing/{anio}.xlsx")
+
+            f = open(f"data_lake/landing/{anio}.xls", "wb")
             f.write(
                 request.urlopen(
                     f"https://github.com/jdvelasq/datalabs/raw/master/datasets/precio_bolsa_nacional/xls/{anio}.xls"
