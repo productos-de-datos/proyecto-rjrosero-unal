@@ -9,10 +9,19 @@ def compute_daily_prices():
 
     * precio: precio promedio diario de la electricidad en la bolsa nacional
 
-
+    >>> compute_daily_prices()
 
     """
-    raise NotImplementedError("Implementar esta función")
+    import pandas as pd
+
+    # Leer el archivo csv
+    data = pd.read_csv("data_lake/cleansed/precios-horarios.csv")
+
+    # Agrupar por fecha
+    data = data.groupby("Fecha").mean()
+
+    # Guardar el archivo csv
+    data.to_csv("data_lake/business/precios-diarios.csv", index=True)
 
 
 if __name__ == "__main__":
