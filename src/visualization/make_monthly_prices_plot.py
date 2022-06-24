@@ -19,7 +19,7 @@ def make_monthly_prices_plot():
     # Importar el archivo de precios mensuales
     os.chdir("../")
 
-    prices_df = pd.read_csv("data_lake/business/precios-mensuales.csv")
+    prices_df = pd.read_csv("src/data_lake/business/precios-mensuales.csv")
 
     # Crea y Guarda el grafico en formato PNG
     figura = prices_df.plot(
@@ -31,7 +31,7 @@ def make_monthly_prices_plot():
         figsize=(10, 5),
     ).get_figure()
 
-    figura.savefig("data_lake/business/reports/figures/monthly_prices.png")
+    figura.savefig("src/data_lake/business/reports/figures/monthly_prices.png")
 
 
 if __name__ == "__main__":
