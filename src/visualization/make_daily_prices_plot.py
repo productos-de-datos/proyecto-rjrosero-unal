@@ -19,7 +19,10 @@ def make_daily_prices_plot():
     # Importar el archivo de precios diarios
     os.chdir("../")
 
-    prices_df = pd.read_csv("../data_lake/business/precios-diarios.csv")
+    prices_df = pd.read_csv(
+        "\\".join(__file__.split("\\")[:-2])
+        + "\\data_lake\\business\\precios-diarios.csv"
+    )
 
     # Crear un grafico de lines que representa los precios promedios diarios
     # prices_df.plot(kind="line", x="fecha", y="precio")
@@ -34,7 +37,10 @@ def make_daily_prices_plot():
         figsize=(10, 5),
     ).get_figure()
 
-    figura.savefig("../data_lake/business/reports/figures/daily_prices.png")
+    figura.savefig(
+        "\\".join(__file__.split("\\")[:-2])
+        + +"\\data_lake\\business\\reports\\figures\\daily_prices.png"
+    )
 
 
 if __name__ == "__main__":
