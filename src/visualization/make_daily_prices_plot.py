@@ -1,3 +1,6 @@
+from matplotlib.pyplot import grid, title
+
+
 def make_daily_prices_plot():
     """Crea un grafico de lines que representa los precios promedios diarios.
 
@@ -6,8 +9,32 @@ def make_daily_prices_plot():
 
     El archivo se debe salvar en formato PNG en data_lake/business/reports/figures/daily_prices.png.
 
+    >>> make_daily_prices_plot()
+
     """
-    raise NotImplementedError("Implementar esta función")
+
+    import pandas as pd
+    import os
+
+    # Importar el archivo de precios diarios
+    os.chdir("../")
+
+    prices_df = pd.read_csv("data/data_lake/business/precios-diarios.csv")
+
+    # Crear un grafico de lines que representa los precios promedios diarios
+    # prices_df.plot(kind="line", x="fecha", y="precio")
+
+    # Guardar el grafico en formato PNG
+    figura = prices_df.plot(
+        kind="line",
+        x="Fecha",
+        y="Precio",
+        title="Precio Promedio Histórico Diario",
+        grid=True,
+        figsize=(10, 5),
+    ).get_figure()
+
+    figura.savefig("data/data_lake/business/reports/figures/daily_prices.png")
 
 
 if __name__ == "__main__":
