@@ -20,7 +20,8 @@ def compute_monthly_prices():
     data["Fecha"] = pd.to_datetime(data["Fecha"])
 
     # Agrupar por año y mes.
-    data = data.groupby(pd.Grouper(key="Fecha", axis=1, freq="M")).mean()
+    # data = data.groupby(pd.Grouper(key="Fecha", axis=1, freq="M")).mean()
+    data = data.set_index("Fecha").resample("M")["Precio"].mean()
 
     # Guardar el archivo csv
     data.to_csv("data_lake/business/precios-mensuales.csv", index=True)
