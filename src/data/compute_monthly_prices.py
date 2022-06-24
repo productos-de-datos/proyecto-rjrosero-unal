@@ -19,7 +19,7 @@ def compute_monthly_prices():
 
     data["Fecha"] = pd.to_datetime(data["Fecha"])
 
-    # Agrupar por año y mes
+    # Agrupar por año y mes.
     data = data.groupby(pd.Grouper(key="Fecha", axis=1, freq="M")).mean()
 
     # Guardar el archivo csv
