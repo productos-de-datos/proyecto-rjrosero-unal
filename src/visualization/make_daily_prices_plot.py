@@ -17,6 +17,7 @@ def make_daily_prices_plot():
     import os
 
     # Importar el archivo de precios diarios
+    os.chdir("/src/data_lake/")
     print(os.getcwd())
     """
     prices_df = pd.read_csv("data_lake\\business\\precios-diarios.csv")
