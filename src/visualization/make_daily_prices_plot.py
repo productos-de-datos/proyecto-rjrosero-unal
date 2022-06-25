@@ -17,11 +17,8 @@ def make_daily_prices_plot():
     import os
 
     # Importar el archivo de precios diarios
-
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    os.chdir(dir_path)
-    print(os.getcwd())
-    os.chdir("./")
+    os.chdir("/home/runner/work/proyecto-rjrosero-unal/proyecto-rjrosero-unal/src")
+    # dir_path = os.path.dirname(os.path.realpath(__file__))
     print(os.getcwd())
     print(os.listdir())
     # print(dir_path)
