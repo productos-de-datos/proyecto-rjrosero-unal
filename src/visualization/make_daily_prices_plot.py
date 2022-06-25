@@ -20,6 +20,7 @@ def make_daily_prices_plot():
     os.chdir("../")
     # dir_path = os.path.dirname(os.path.realpath(__file__))
     print(os.getcwd())
+    print(os.listdir())
     """
     print(
         os.listdir(
