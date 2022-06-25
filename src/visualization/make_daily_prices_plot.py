@@ -21,6 +21,8 @@ def make_daily_prices_plot():
     # dir_path = os.path.dirname(os.path.realpath(__file__))
     print(os.getcwd())
     print(os.listdir())
+
+    prices_df = pd.read_csv("data_lake/business/precios-diarios.csv")
     """
     print(
         os.listdir(
