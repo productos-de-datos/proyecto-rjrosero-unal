@@ -17,9 +17,10 @@ def make_daily_prices_plot():
     import os
 
     # Importar el archivo de precios diarios
-    # os.chdir("/home/runner/work/proyecto-rjrosero-unal/proyecto-rjrosero-unal/src")
+    os.chdir("../")
     # dir_path = os.path.dirname(os.path.realpath(__file__))
-    # print(os.getcwd())
+    print(os.getcwd())
+    """
     print(
         os.listdir(
             "/home/runner/work/proyecto-rjrosero-unal/proyecto-rjrosero-unal/src"
@@ -28,6 +29,7 @@ def make_daily_prices_plot():
     print(os.listdir("/home/runner/work/proyecto-rjrosero-unal/proyecto-rjrosero-unal"))
     print(os.listdir("/home/runner/work/proyecto-rjrosero-unal/"))
     # print(dir_path)
+    """
     """
     prices_df = pd.read_csv("data_lake\\business\\precios-diarios.csv")
 
