@@ -22,7 +22,7 @@ def make_features():
     import os
     import shutil
 
-    print(os.getcwd())
+    # print(os.getcwd())
     os.chdir("./")
 
     # Se copia el archivo de business a la carpeta features
