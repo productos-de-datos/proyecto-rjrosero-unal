@@ -27,8 +27,8 @@ def make_features():
 
     # Se copia el archivo de business a la carpeta features
     shutil.copy(
-        "data/data_lake/business/precios-diarios.csv",
-        "data/data_lake/business/features/precios-diarios.csv",
+        "data_lake/business/precios-diarios.csv",
+        "data_lake/business/features/precios-diarios.csv",
     )
 
 
