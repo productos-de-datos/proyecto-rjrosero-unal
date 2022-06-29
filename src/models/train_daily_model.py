@@ -68,7 +68,7 @@ def train_daily_model():
     )
 
     forecaster = ForecasterAutoreg(
-        regressor=make_pipeline(StandardScaler(), Ridge()), lags=24
+        regressor=make_pipeline(StandardScaler(), Ridge()), lags=1
     )
 
     # Lags utilizados como predictores
@@ -97,8 +97,8 @@ def train_daily_model():
     print(os.listdir(os.getcwd() + "/src"))
     print(os.listdir(os.getcwd()))
     # se guarda el modelo en un archivo pickle para poder ser utilizado
-    # with open("src/models/precios-diarios.pkl", "wb") as f:
-    #    pickle.dump(forecaster, f)
+    with open("src/models/precios-diarios.pkl", "wb") as f:
+        pickle.dump(forecaster, f)
 
 
 if __name__ == "__main__":
