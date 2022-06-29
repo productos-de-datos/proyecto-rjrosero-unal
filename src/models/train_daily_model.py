@@ -102,6 +102,8 @@ def train_daily_model():
     with open(os.getcwd() + "/models/precios-diarios.pkl", "wb") as f:
         pickle.dump(forecaster, f)
 
+    print(os.listdir(os.getcwd() + "/models"))
+
 
 if __name__ == "__main__":
     import doctest
