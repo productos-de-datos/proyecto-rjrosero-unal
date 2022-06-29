@@ -92,7 +92,7 @@ def train_daily_model():
     )
 
     # se guarda el modelo en un archivo pickle para poder ser utilizado
-    with open("precios-diarios.pkl", "wb") as f:
+    with open("models/precios-diarios.pkl", "wb") as f:
         pickle.dump(forecaster, f)
 
 
