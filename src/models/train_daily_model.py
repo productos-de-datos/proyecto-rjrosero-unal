@@ -92,7 +92,7 @@ def train_daily_model():
     )
 
     # print(os.getcwd() + "/src/models")
-    os.chdir("/src")
+    os.chdir("src")
     print(os.listdir(os.getcwd() + "/models"))
     print(os.listdir(os.getcwd() + "/data"))
     print(os.listdir(os.getcwd()))
