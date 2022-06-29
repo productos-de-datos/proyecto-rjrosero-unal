@@ -94,7 +94,6 @@ def train_daily_model():
     # print(os.getcwd() + "/src/models")
     os.chdir("src")
     print(os.listdir(os.getcwd() + "/models"))
-    print(os.listdir(os.getcwd() + "/data"))
     print(os.listdir(os.getcwd()))
     print(os.getcwd())
 
@@ -102,7 +101,7 @@ def train_daily_model():
     with open("models/precios-diarios.pkl", "wb") as f:
         pickle.dump(forecaster, f)
 
-    print(os.listdir("/models"))
+    # print(os.listdir("/models"))
 
 
 if __name__ == "__main__":
