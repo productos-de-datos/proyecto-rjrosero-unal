@@ -15,7 +15,6 @@ def clean_data():
     """
     import pandas as pd
     import os
-    import numpy as np
 
     # Lista de archivos cvs en la capa raw
     archivosRaw = [
