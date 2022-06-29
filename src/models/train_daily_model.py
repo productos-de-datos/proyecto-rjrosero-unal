@@ -92,10 +92,10 @@ def train_daily_model():
     )
 
     # print(os.getcwd() + "/src")
-    # print(os.listdir())
+    print(os.listdir(os.getcwd() + "/src"))
     # se guarda el modelo en un archivo pickle para poder ser utilizado
-    with open("src/models/precios-diarios.pkl", "wb") as f:
-        pickle.dump(forecaster, f)
+    # with open("src/models/precios-diarios.pkl", "wb") as f:
+    #    pickle.dump(forecaster, f)
 
 
 if __name__ == "__main__":
