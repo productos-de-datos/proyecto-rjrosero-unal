@@ -48,7 +48,9 @@ def make_forecasts():
         verbose=True,
     )
 
-    print(predicciones.head())
+    predicciones.join(datos_test["Precio"]).to_csv(
+        "data_lake/business/forecasts/precios-diarios.csv", index=True
+    )
 
 
 def cargar_modelo():
