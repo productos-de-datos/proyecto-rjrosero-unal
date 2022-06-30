@@ -2,9 +2,9 @@
 Archivo para pruebas unitarias de las funciones del proyecto.
 """
 
+import os
 from src.features.make_features import make_features
 from src.data.compute_daily_prices import compute_daily_prices
-import os
 
 
 def test_make_features():
