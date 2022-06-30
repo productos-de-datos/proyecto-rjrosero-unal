@@ -24,13 +24,6 @@ def compute_daily_prices():
     data.to_csv("data_lake/business/precios-diarios.csv", index=True)
 
 
-def test_compute_daily_prices():
-    """Comprobar que compute_daily_prices() funciona correctamente."""
-    import os
-
-    assert os.path.isfile("data_lake/business/precios-diarios.csv") is True
-
-
 if __name__ == "__main__":
     import doctest
 

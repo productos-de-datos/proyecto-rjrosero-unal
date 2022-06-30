@@ -32,13 +32,6 @@ def make_features():
     )
 
 
-def test_make_features():
-    """Comprobar que make_features() funciona correctamente."""
-    import os
-
-    assert os.path.isfile("data_lake/business/features/precios-diarios.csv") is True
-
-
 if __name__ == "__main__":
     import doctest
 
