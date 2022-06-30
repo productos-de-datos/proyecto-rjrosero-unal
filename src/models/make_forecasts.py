@@ -20,7 +20,7 @@ def make_forecasts():
 
     * El pronóstico del precio promedio real.
 
-
+    >>> make_forecasts()
     """
 
     modelo = cargar_modelo()
