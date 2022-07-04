@@ -19,11 +19,14 @@ def create_data_lake():
 
     ```
 
+    se crea una lista por cada carpeta raíz de la estructura
+    se crea la carpeta data_lake
+    se crea cada carpeta dentro de data_lake
+
     >>> create_data_lake()
     """
     import os
 
-    # se crea una lista por cada carpeta raíz de la estructura
     data_lake = [
         "landing",
         "raw",
@@ -35,10 +38,8 @@ def create_data_lake():
         "business/forecasts",
     ]
 
-    # se crea la carpeta data_lake
     os.mkdir("data_lake")
 
-    # se crea cada carpeta dentro de data_lake
     for folder in data_lake:
         os.mkdir(os.path.join("data_lake", folder))
 

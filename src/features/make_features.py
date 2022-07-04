@@ -16,6 +16,8 @@ def make_features():
     Returns:
         None
 
+    # Se copia el archivo de business a la carpeta features
+
     >>> make_features()
     """
     import pandas as pd
@@ -25,7 +27,6 @@ def make_features():
     # print(os.getcwd())
     os.chdir("./")
 
-    # Se copia el archivo de business a la carpeta features
     shutil.copy(
         "data_lake/business/precios-diarios.csv",
         "data_lake/business/features/precios-diarios.csv",
