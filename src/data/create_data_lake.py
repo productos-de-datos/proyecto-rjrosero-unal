@@ -19,9 +19,29 @@ def create_data_lake():
 
     ```
 
+    se crea una lista por cada carpeta raíz de la estructura
+    se crea la carpeta data_lake
+    se crea cada carpeta dentro de data_lake
 
+    >>> create_data_lake()
     """
-    raise NotImplementedError("Implementar esta función")
+    import os
+
+    data_lake = [
+        "landing",
+        "raw",
+        "cleansed",
+        "business",
+        "business/reports",
+        "business/reports/figures",
+        "business/features",
+        "business/forecasts",
+    ]
+
+    os.mkdir("data_lake")
+
+    for folder in data_lake:
+        os.mkdir(os.path.join("data_lake", folder))
 
 
 if __name__ == "__main__":
